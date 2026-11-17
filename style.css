@@ -156,8 +156,8 @@ footer{scroll-snap-align:end;padding:28px 4vw;color:var(--m);font-size:13px;disp
 .kr:first-child{border-top:0}
 /* Photo · Video · Sound in one row; Photo shares the AI icon column */
 .kr-trio{grid-template-columns:minmax(130px,240px) 170px minmax(0,1fr)}
-.kt-photo{display:contents}
-.kt-group{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4vw;align-items:start}
+.kt-photo{grid-column:2}
+.kt-group{grid-column:3;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4vw;align-items:start}
 .kt{display:flex;flex-direction:column;gap:18px}
 .kt h4{font:500 clamp(22px,2.4vw,38px)/1 'Inter','Noto Sans KR','Apple SD Gothic Neo',system-ui,sans-serif;letter-spacing:-.035em}
 .kt img{display:block;width:calc(var(--w)*1px);max-width:100%;height:auto}
@@ -186,7 +186,7 @@ footer{scroll-snap-align:end;padding:28px 4vw;color:var(--m);font-size:13px;disp
 .yr b{display:block;font:600 clamp(40px,5.4vw,96px)/1 'Inter','Noto Sans KR','Apple SD Gothic Neo',system-ui,sans-serif;letter-spacing:-.05em;color:var(--k);-webkit-text-stroke:2px var(--c);paint-order:stroke fill;transition:color .35s}
 .yr div:hover b{color:var(--c)}
 .yr p{margin-top:22px;font-size:15px;line-height:1.7;color:var(--m)}
-@media(max-width:900px){.kr-trio{grid-template-columns:1fr;row-gap:24px}.kt-group{grid-template-columns:1fr;row-gap:24px}.sp-in{padding-left:10px}.kr{grid-template-columns:1fr auto;row-gap:18px}.kv{grid-column:1/-1}.lr{grid-template-columns:1fr;gap:0}.lr>span{padding-top:8px}.yr{grid-template-columns:repeat(2,1fr);row-gap:24px}.yr div:nth-child(3){border-left:0;padding-left:0}}
+@media(max-width:900px){.kr-trio{grid-template-columns:1fr;row-gap:24px}.kt-photo,.kt-group{grid-column:auto}.kt-group{grid-template-columns:1fr;row-gap:24px}.sp-in{padding-left:10px}.kr{grid-template-columns:1fr auto;row-gap:18px}.kv{grid-column:1/-1}.lr{grid-template-columns:1fr;gap:0}.lr>span{padding-top:8px}.yr{grid-template-columns:repeat(2,1fr);row-gap:24px}.yr div:nth-child(3){border-left:0;padding-left:0}}
 @media(max-width:520px){.kv div{grid-template-columns:1fr}}
 /* CONTACT social icons: main icon + faded echo, both drifting; whole group follows the mouse */
 .ct h2{position:relative;z-index:3}
